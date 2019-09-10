@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.elum.session.dao.SessionRandomExtractMapper">
+  <resultMap id="sessionRandomExtractResultMap" type="com.elum.session.entity.SessionRandomExtract">
+    <result column="task_id" jdbcType="INTEGER" property="taskId" />
+    <result column="session_id" jdbcType="VARCHAR" property="sessionId" />
+    <result column="start_time" jdbcType="VARCHAR" property="startTime" />
+    <result column="search_keywords" jdbcType="VARCHAR" property="searchKeywords" />
+    <result column="click_category_ids" jdbcType="VARCHAR" property="clickCategoryIds" />
+  </resultMap>
+
+</mapper>

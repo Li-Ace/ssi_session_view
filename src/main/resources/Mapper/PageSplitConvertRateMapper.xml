@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.elum.session.dao.PageSplitConvertRateMapper">
+  <resultMap id="pageSplitConvertRateResultMap" type="com.elum.session.entity.PageSplitConvertRate">
+    <result column="taskid" jdbcType="INTEGER" property="taskid" />
+    <result column="convert_rate" jdbcType="VARCHAR" property="convertRate" />
+  </resultMap>
+
+</mapper>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.elum.session.dao.Top10CategoryMapper">
+  <resultMap id="top10CategoryResultMap" type="com.elum.session.entity.Top10Category">
+    <result column="task_id" jdbcType="INTEGER" property="taskId" />
+    <result column="category_id" jdbcType="INTEGER" property="categoryId" />
+    <result column="click_count" jdbcType="INTEGER" property="clickCount" />
+    <result column="order_count" jdbcType="INTEGER" property="orderCount" />
+    <result column="pay_count" jdbcType="INTEGER" property="payCount" />
+  </resultMap>
+
+
+</mapper>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.elum.session.dao.AdUserClickCountMapper">
+  <resultMap id="adUserClickCountResultMap" type="com.elum.session.entity.AdUserClickCount">
+    <result column="date" jdbcType="VARCHAR" property="date" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="ad_id" jdbcType="INTEGER" property="adId" />
+    <result column="click_count" jdbcType="INTEGER" property="clickCount" />
+  </resultMap>
+
+</mapper>

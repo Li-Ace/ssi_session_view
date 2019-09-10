@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.elum.session.dao.AdStatMapper">
+  <resultMap id="adStatResultMap" type="com.elum.session.entity.AdStat">
+    <result column="date" jdbcType="VARCHAR" property="date" />
+    <result column="province" jdbcType="VARCHAR" property="province" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="ad_id" jdbcType="INTEGER" property="adId" />
+    <result column="click_count" jdbcType="INTEGER" property="clickCount" />
+  </resultMap>
+
+</mapper>

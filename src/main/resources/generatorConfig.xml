@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+		PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+		"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<!--导入属性配置-->
+<!--	<properties resource="./generator.properties"></properties>-->
+
+	<!--指定特定数据库的jdbc驱动jar包的位置-->
+	<classPathEntry location="D:\bigdate\mysql-connector-java-5.1.26-bin.jar"/>
+	<!-- 指定运行环境是mybatis3的版本 -->
+	<context id="testTables" targetRuntime="MyBatis3">
+
+		<commentGenerator>
+			<!-- 是否取消注释 -->
+			<property name="suppressAllComments" value="true" />
+			<!-- 是否生成注释代时间戳 -->
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+		<!-- 处理2   jdbc 连接信息 -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+						connectionURL="jdbc:mysql://172.13.5.43:3306/elum?useUnicode=true&amp;characterEncoding=UTF-8" userId="root" password="root">
+		</jdbcConnection>
+
+		<!--处理3   targetPackage指定模型在生成在哪个包 ,targetProject指定项目的src,-->
+		<javaModelGenerator targetPackage="com.elum.session.entity"
+							targetProject="src/main/java">
+			<!-- 去除字段前后空格 -->
+			<property name="trimStrings" value="false" />
+		</javaModelGenerator>
+
+
+		<!--处理4   配置SQL映射文件生成信息 -->
+		<sqlMapGenerator targetPackage="com.elum.session.dao"
+						 targetProject="src/main/java" />
+		<!-- 处理5   配置dao接口生成信息-->
+		<javaClientGenerator type="XMLMAPPER"
+							 targetPackage="com.elum.session.dao"
+							 targetProject="src/main/java" />
+
+		<table tableName="ad_blacklist" domainObjectName="AdBlacklist"/>
+		<table tableName="ad_click_trend" domainObjectName="AdClickTrend"/>
+		<table tableName="ad_province_top3" domainObjectName="AdProvinceTop3"/>
+		<table tableName="ad_stat" domainObjectName="AdStat"/>
+		<table tableName="ad_user_click_count" domainObjectName="AdUserClickCount"/>
+		<table tableName="area_top3_product" domainObjectName="AreaTop3Product"/>
+		<table tableName="city_info" domainObjectName="CityInfo"/>
+		<table tableName="page_split_convert_rate" domainObjectName="PageSplitConvertRate"/>
+		<table tableName="session_aggr_stat" domainObjectName="SessionAggrStat"/>
+		<table tableName="session_detail" domainObjectName="SessionDetail"/>
+		<table tableName="session_random_extract" domainObjectName="SessionRandomExtract"/>
+		<table tableName="task" domainObjectName="Task"/>
+		<table tableName="top10_category" domainObjectName="Top10Category"/>
+		<table tableName="top10_session" domainObjectName="Top10Session"/>
+		<table tableName="USER" domainObjectName="User"/>
+
+
+
+	</context>
+</generatorConfiguration>

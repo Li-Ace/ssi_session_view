@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.elum.session.dao.AdClickTrendMapper">
+  <resultMap id="adClickTrendResultMap" type="com.elum.session.entity.AdClickTrend">
+    <result column="date" jdbcType="VARCHAR" property="date" />
+    <result column="hour" jdbcType="VARCHAR" property="hour" />
+    <result column="minute" jdbcType="VARCHAR" property="minute" />
+    <result column="ad_id" jdbcType="INTEGER" property="adId" />
+    <result column="click_count" jdbcType="INTEGER" property="clickCount" />
+  </resultMap>
+
+
+
+</mapper>
