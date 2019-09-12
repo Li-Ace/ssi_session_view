@@ -2,8 +2,7 @@ package com.elum.session.service.impl;
 
 
 
-import com.elum.session.dao.BaseMapper;
-import com.elum.session.dao.SessionDetailMapper;
+import com.elum.session.dao.*;
 import com.elum.session.entity.Page;
 import com.elum.session.service.BaseService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,15 +14,55 @@ import java.lang.reflect.ParameterizedType;
 public class BaseServiceImpl<T> implements BaseService<T> {
 	
 	protected BaseMapper<T> baseMapper;
-	
-//	@Autowired
-//	protected  SupplierMapper supplierMapper;
+
 
 	@Autowired
 	protected SessionDetailMapper sessionDetailMapper;
 
+	@Autowired
+	protected AdBlacklistMapper adBlacklistMapper;
 
-	
+	@Autowired
+	protected AdClickTrendMapper adClickTrendMapper;
+
+	@Autowired
+	protected AdProvinceTop3Mapper adProvinceTop3Mapper;
+
+	@Autowired
+	protected AdStatMapper adStatMapper;
+
+	@Autowired
+	protected AdUserClickCountMapper adUserClickCountMapper;
+
+	@Autowired
+	protected AreaTop3ProductMapper areaTop3ProductMapper;
+
+	@Autowired
+	protected CityInfoMapper cityInfoMapper;
+
+	@Autowired
+	protected PageSplitConvertRateMapper pageSplitConvertRateMapper;
+
+	@Autowired
+	protected SessionAggrStatMapper sessionAggrStatMapper;
+
+	@Autowired
+	protected SessionRandomExtractMapper sessionRandomExtractMapper;
+
+	@Autowired
+	protected TaskMapper taskMapper;
+
+	@Autowired
+	protected Top10CategoryMapper top10CategoryMapper;
+
+	@Autowired
+	protected Top10SessionMapper top10SessionMapper;
+
+
+
+
+
+
 	@PostConstruct//在构造方法后，初化前执行
 	private void initBaseMapper() throws Exception{
 		//完成以下逻辑，需要对研发本身进行命名与使用规范
