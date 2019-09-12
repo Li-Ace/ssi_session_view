@@ -17,4 +17,21 @@
   </resultMap>
 
 
+  <!--通过多条件分页查询，返回数据集-->
+  <select id="selectPageListUseDyc" parameterType="page" resultMap="sessionDetailResultMap">
+    select * from task
+    <where>
+      <if test="paramEntity.taskId!=null">and task_id like #{paramEntity.taskId}</if>
+    </where>
+    limit #{start},#{rows}
+  </select>
+
+  <!--  通过多条件分页查询, count-->
+  <select id="selectPageCountUseDyc" parameterType="page" resultType="sessionDetailResultMap">
+    select count(1) from task
+    <where>
+      <if test="paramEntity.taskId!=null">and task_id like #{paramEntity.taskId}</if>
+    </where>
+  </select>
+
 </mapper>
