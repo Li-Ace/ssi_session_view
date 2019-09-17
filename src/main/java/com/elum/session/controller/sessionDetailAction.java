@@ -15,7 +15,7 @@ import javax.annotation.Resource;
 public class sessionDetailAction extends BaseAction {
 
     @Resource
-    public SessionDetailService sessionDetailService;
+    public SessionDetailService  sessionDetailService;
 
     @RequestMapping("/selectPageUseDyc")
     @ResponseBody
