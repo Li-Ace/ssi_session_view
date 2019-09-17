@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 
 @Controller
-@RequestMapping("/adBlackList")
+@RequestMapping("/adUserClickCount")
 public class AdUserClickCountAction extends BaseAction {
 
     @Resource

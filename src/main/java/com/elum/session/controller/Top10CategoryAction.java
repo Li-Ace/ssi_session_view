@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.annotation.Resource;
 
 @Controller
-@RequestMapping("/adBlackList")
+@RequestMapping("/top10Category")
 public class Top10CategoryAction extends BaseAction {
 
     @Resource
