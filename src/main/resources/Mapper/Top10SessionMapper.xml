@@ -7,6 +7,20 @@
     <result column="session_id" jdbcType="VARCHAR" property="sessionId" />
     <result column="click_count" jdbcType="INTEGER" property="clickCount" />
   </resultMap>
+  <select id="selectPageListUseDyc" parameterType="page" resultMap="top10SessionResultMap">
+    select * from top10_session
+    <where>
+      <if test="paramEntity.taskId!=null">and task_id like #{paramEntity.taskId}</if>
+    </where>
+    limit #{start},#{rows}
+  </select>
 
+  <!--  通过多条件分页查询, count-->
+  <select id="selectPageCountUseDyc" parameterType="page" resultType="Integer">
+    select count(1) from top10_session
+    <where>
+      <if test="paramEntity.taskId!=null">and task_id like #{paramEntity.taskId}</if>
+    </where>
+  </select>
 
 </mapper>
